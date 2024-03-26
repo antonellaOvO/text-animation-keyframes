@@ -2,10 +2,41 @@ body {
   font-family: "Rajdhani", sans-serif;
   font-weight: 400;
   font-style: normal;
-  font-size: xx-large;
   text-align: center;
 }
 
 div {
   margin-top: 300px;
+  margin: 300px 300px;
+}
+
+div h1 {
+  color: indianred;
+  overflow: hidden;
+  border-right: 3px solid black;
+  white-space: nowrap; /* Keeps the content on a single line */
+  letter-spacing: 0.15em;
+  animation: typing 8s steps(25, end) infinite, border-typing 0.5s infinite;
+  /*steps(n, jumpterms) method is a timing function in animation property that divides an animation into n steps, displaying each step at equal intervals of time. 
+  n: Number of divisions between the start and stop of the animation.
+  jumpterm: It indicates the behavior of the steps function
+  end = indicates the last division ends  when the animation ends*/
+}
+
+@keyframes typing {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+@keyframes border-typing {
+  0% {
+    border-color: transparent;
+  }
+  100% {
+    border-color: black;
+  }
 }
